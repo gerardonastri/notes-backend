@@ -64,8 +64,8 @@ def createNote(request):
         body=data['body']
     )
     serializer = NoteSerializer(note, many=False)
-
     return Response(serializer.data)
+
 
 @csrf_exempt
 @api_view(['PUT'])
